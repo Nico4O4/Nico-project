@@ -17,4 +17,4 @@ costs_per_person = 14
 # Corrected cost calculation
 total_costs = starting_costs + (int(input_meters) * costs_per_meter) + (int(input_persons) * costs_per_person)
 
-print("The total costs for teleporting", input_meters, "meters with", input_persons, "persons is", total_costs, "Dollars")
+print("The total costs for teleporting", input_meters, "meters with", input_persons, "persons is", total_costs, "apple dollars.")
