@@ -14,7 +14,7 @@
 # Auswählen zwischen + und -
 
 while True: 
-    rechner = int(input("Gib 1 für + und 2 für - ein: "))
+    rechner = int(input("Gib 1 zum addieren ein und 2 fü subtrahieren: "))
 
     if rechner == 1:
         print("Du hast + gewählt")
