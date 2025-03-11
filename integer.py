@@ -34,6 +34,12 @@ while True:
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist", zahl1 * zahl2 )
 
+    if rechner == 4:
+        print("Du hast / gewählt")
+        zahl1 = int(input("Bitte gib die erste Zahl ein: "))
+        zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        print("Das Ergebnis ist", zahl1 / zahl2 )
+
     print("Berechnung abgeschlossen was jetzt?")
     option = input("Neue Berechnung starten? [Y/N]: ")
     
