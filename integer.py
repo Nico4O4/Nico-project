@@ -14,7 +14,7 @@
 # Auswählen zwischen + und -
 
 while True: 
-    rechner = int(input("Gib 1 zum addieren ein und 2 fü subtrahieren: "))
+    rechner = int(input("1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren: "))
 
     if rechner == 1:
         print("Du hast + gewählt")
@@ -27,6 +27,12 @@ while True:
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist:", zahl1 - zahl2)
+
+    if rechner == 3:
+        print("Du hast * gewählt")
+        zahl1 = int(input("Bitte gib die erste Zahl ein: "))
+        zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        print("Das Ergebnis ist", zahl1 * zahl2 )
 
     print("Berechnung abgeschlossen was jetzt?")
     option = input("Neue Berechnung starten? [Y/N]: ")
