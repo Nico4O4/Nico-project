@@ -1,7 +1,5 @@
-#LANGSAM ARBEITEN
-
 # Print
-#print(4+1)
+# print(4+1)
 
 #  Variablen
 #a  = 3
@@ -10,8 +8,8 @@
 
 # Mit Benutzer Eingabe + Variable
 
-#zahl = int(input("Gib eine Zahl ein: "))
-#print("Deine Zahl * 4 ist:", zahl * 4)
+# zahl = int(input("Gib eine Zahl ein: "))
+# print("Deine Zahl * 4 ist:", zahl * 4)
 
 # Auswählen zwischen + und -
 
