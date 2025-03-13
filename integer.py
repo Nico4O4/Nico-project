@@ -14,7 +14,11 @@
 # Auswählen zwischen + und -
 
 while True: 
-    rechner = int(input("1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren: "))
+    try:
+        rechner = int(input("1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren: "))
+    except ValueError:
+        print("Fehler: Bitte Zahl von 1-4 eigenben")
+        continue #Geht zurück zum Anfang der Schleife
 
     if rechner == 1:
         print("Du hast + gewählt")
@@ -41,8 +45,15 @@ while True:
         print("Das Ergebnis ist", zahl1 / zahl2 )
 
     print("Berechnung abgeschlossen was jetzt?")
-    option = input("Neue Berechnung starten? [Y/N]: ")
+    option = input("Neue Berechnung starten? [Y/N]: ").strip().upper()
+    if option == "Y":
+        print("Neustart...")
     
-    if option == "N":
+    elif option == "N":
         print("Programm beendet")
-        exit()
+        exit() #Beendet das Programm
+
+    else:
+        print("Fehler: Bitte gib Y/y für eine neue Berechnung ein oder N/n zum beenden")
+
+    # Work in progress ...
