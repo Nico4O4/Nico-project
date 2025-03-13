@@ -1,4 +1,4 @@
-Hi :D
+Hi 
 
 The file "Integer" is a calculator I coded to learn how integers and variables work.
 
