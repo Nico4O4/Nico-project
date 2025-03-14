@@ -1,12 +1,7 @@
-Hi 
+Hi!
 
-The file "Integer" is a calculator I coded to learn how integers and variables work.
+The file "Calculator" is a project I'm working on to relearn my Python skills after a break.
 
-In the code, there are some German words because it's easier for me to understand them. You can use Google Translate if you don't understand them.
+The file "Teleporter" was an exercise I did to refresh my understanding of variables.
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-The other file, named "Teleporter," is an exercise where I learn how to work with inputs, prints, and more variables.
-
-I mostly work on the "Integer" file for now.
-
+Currently, I'm actively working on the Calculator.
