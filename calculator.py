@@ -26,34 +26,38 @@ while True:
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist:", zahl1 + zahl2)
 
-    if rechner == 2:
+    elif rechner == 2:
         print("Du hast - gewählt")
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist:", zahl1 - zahl2)
 
-    if rechner == 3:
+    elif rechner == 3:
         print("Du hast * gewählt")
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist", zahl1 * zahl2 )
 
-    if rechner == 4:
+    elif rechner == 4:
         print("Du hast / gewählt")
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist", zahl1 / zahl2 )
 
     print("Berechnung abgeschlossen was jetzt?")
-    option = input("Neue Berechnung starten? [Y/N]: ").strip().upper()
-    if option == "Y":
-        print("Neustart...")
-    
-    elif option == "N":
-        print("Programm beendet")
-        exit() #Beendet das Programm
 
-    else:
-        print("Fehler: Bitte gib Y/y für eine neue Berechnung ein oder N/n zum beenden")
+    while True:
+        option = input("Neue Berechnung starten? [Y/N]: ").strip().upper()
+    
+        if option == "Y":
+            print("Neustart...")
+            break # Bricht die Y/N Schleife ab und geht zurück zur ersten Schleife
+
+        elif option == "N":
+            print("Programm beendet")
+            exit() #Beendet das Programm
+
+        else:
+            print("Fehler: Bitte gib Y/y für eine neue Berechnung ein oder N/n zum beenden")
 
     # Work in progress ...
