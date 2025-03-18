@@ -13,11 +13,22 @@
 
 # Auswählen zwischen + und -
 
+# Work in progress ...
+history = [] # Liste für den Verlauf
+
+def addieren(zahl1, zahl2): # Die Funktioon braucht 2 Zahlen die in der variable zahl1 und zahl2 gespeichert werden
+    ergebnis = zahl1 + zahl2 # Die beiden Zahlen werden addiert und in der Variable ergebnis gespeichert
+    history.append(f"{zahl1} + {zahl2} = {ergebnis}") # Der Verlauf wird in die Liste gespeichert
+    return ergebnis # Das Ergebnis wird zurückgegeben 
+# Work in progress ...
+
+
+
 while True: 
     try:
-        rechner = int(input("1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren: "))
+        rechner = int(input(" | 1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren | Verlauf (kommt bald) | "))
     except ValueError:
-        print("Fehler: Bitte Zahl von 1-4 eigenben")
+        print("Fehler: Bitte Zahl von 1-4 eingeben. 'Verlauf' ist bald verfügbar!")
         continue #Geht zurück zum Anfang der Schleife
 
     if rechner == 1:
@@ -44,7 +55,14 @@ while True:
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist", zahl1 / zahl2 )
 
-    print("Berechnung abgeschlossen was jetzt?")
+    elif rechner.lower() == "verlauf":
+        if history:
+            print("Letze Berechnungen seit dem letzen Start des Programm: ")
+            for eintrag in history:
+                print(eintrag)
+
+        else: 
+            print("Keine Berechnungen im Verlauf gefunden")
 
     while True:
         option = input("Neue Berechnung starten? [Y/N]: ").strip().upper()
