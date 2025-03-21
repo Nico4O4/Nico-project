@@ -1,15 +1,11 @@
-# Print
-# print(4+1)
+import os
 
-#  Variablen
-#a  = 3
-#b = 7
-#print(a+b)
-
-# Mit Benutzer Eingabe + Variable
-
-# zahl = int(input("Gib eine Zahl ein: "))
-# print("Deine Zahl * 4 ist:", zahl * 4)
+def clear_console():
+    # Überprüft welches Betriebssystem benutzt wird
+    if os.name == "nt": # Windows
+        os.system("cls")
+    else: # Unix oder MacOS
+        os.system("clear") 
 
 
 history = [] # Liste für den Verlauf
@@ -37,7 +33,7 @@ def dividieren(zahl1, zahl2):
 
 while True: 
     try:
-        rechner = (input(" | 1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren | Verlauf | Beenden | ")).strip().lower()
+        rechner = (input(" | 1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren | Verlauf | Beenden | Clear | ")).strip().lower()
     except ValueError:
         print("Fehler: Bitte Zahl von 1-4 eingeben. ")
         continue #Geht zurück zum Anfang der Schleife
@@ -47,37 +43,47 @@ while True:
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist:", addieren(zahl1, zahl2))
+        
 
     elif rechner == "2":
         print("Du hast - gewählt")
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist:", subtrahieren(zahl1, zahl2))
+        
 
     elif rechner == "3":
         print("Du hast * gewählt")
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist", multiplizieren(zahl1, zahl2))
+     
 
     elif rechner == "4":
         print("Du hast / gewählt")
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist", dividieren(zahl1, zahl2))
+       
 
     elif rechner == "verlauf":
         if history:
             print("Letze Berechnungen seit dem letzen Start des Programm: ")
             for eintrag in history:
                 print(eintrag)
+            #continue # Geht zurück zum Anfang der 1. Schleife
 
         else: 
             print("Keine Berechnungen im Verlauf gefunden")
+            continue # Geht zurück zum Anfang der 1. Schleife
 
     elif rechner == "beenden":
         print("Programm beendet")
         exit()
+
+    elif rechner == "clear":
+        clear_console()
+        continue # Geht zurück zum Anfang der 1. Schleife
 
     else:
         print("Fehler: Bitte gib eine Zahl von 1-4 ein oder Verlauf / Beenden.")
@@ -87,8 +93,9 @@ while True:
         option = input("Zur Hauptauswahl zurück kehren? [Y/N]: ").strip().upper()
     
         if option == "Y":
-            print("Neustart...")
+            clear_console()
             break # Bricht die Y/N Schleife ab und geht zurück zur ersten Schleife
+            
 
         elif option == "N":
             print("Programm beendet")
