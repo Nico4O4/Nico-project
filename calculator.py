@@ -37,7 +37,7 @@ def dividieren(zahl1, zahl2):
 
 while True: 
     try:
-        rechner = (input(" | 1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren | Verlauf | ")).strip().lower()
+        rechner = (input(" | 1 = Addieren | 2 = Subtrahieren | 3 = Multipliezieren | 4 = Dividieren | Verlauf | Beenden | ")).strip().lower()
     except ValueError:
         print("Fehler: Bitte Zahl von 1-4 eingeben. ")
         continue #Geht zurück zum Anfang der Schleife
@@ -75,8 +75,12 @@ while True:
         else: 
             print("Keine Berechnungen im Verlauf gefunden")
 
+    elif rechner == "beenden":
+        print("Programm beendet")
+        exit()
+
     else:
-        print("Fehler: Bitte gib eine Zahl von 1-4 ein oder Verlauf.")
+        print("Fehler: Bitte gib eine Zahl von 1-4 ein oder Verlauf / Beenden.")
         continue # Geht zurück zum Anfang der 1. Schleife
 
     while True:
