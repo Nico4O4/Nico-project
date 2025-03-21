@@ -75,6 +75,10 @@ while True:
         else: 
             print("Keine Berechnungen im Verlauf gefunden")
 
+    else:
+        print("Fehler: Bitte gib eine Zahl von 1-4 ein oder Verlauf.")
+        continue # Geht zurück zum Anfang der 1. Schleife
+
     while True:
         option = input("Zur Hauptauswahl zurück kehren? [Y/N]: ").strip().upper()
     
