@@ -38,13 +38,12 @@ while True:
         print("Fehler: Bitte Zahl von 1-4 eingeben. ")
         continue #Geht zurück zum Anfang der Schleife
 
-    if rechner == "1":
+    if rechner() == "1":
         print("Du hast + gewählt")
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
         zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
         print("Das Ergebnis ist:", addieren(zahl1, zahl2))
-        
-
+    
     elif rechner == "2":
         print("Du hast - gewählt")
         zahl1 = int(input("Bitte gib die erste Zahl ein: "))
@@ -71,7 +70,7 @@ while True:
             print("Letze Berechnungen seit dem letzen Start des Programm: ")
             for eintrag in history:
                 print(eintrag)
-            #continue # Geht zurück zum Anfang der 1. Schleife
+            continue
 
         else: 
             print("Keine Berechnungen im Verlauf gefunden")
