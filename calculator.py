@@ -41,8 +41,8 @@ while True:
     if rechner == "1":
         print("Du hast + gewählt")
         try:
-            zahl1 = int(input("Bitte gib die erste Zahl ein: "))
-            zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+            zahl1 = float(input("Bitte gib die erste Zahl ein: "))
+            zahl2 = float(input("Bitte gib die zweite Zahl ein: "))
         except ValueError:
             print("Fehler: Bitte nur Zahlen eingeben. ")
             continue
@@ -51,8 +51,8 @@ while True:
     elif rechner == "2":
         print("Du hast - gewählt")
         try:
-            zahl1 = int(input("Bitte gib die erste Zahl ein: "))
-            zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+            zahl1 = float(input("Bitte gib die erste Zahl ein: "))
+            zahl2 = float(input("Bitte gib die zweite Zahl ein: "))
         except ValueError:
             print("Fehler: Bitte nur Zahlen eingeben. ")
             continue
@@ -62,8 +62,8 @@ while True:
     elif rechner == "3":
         print("Du hast * gewählt")
         try:
-            zahl1 = int(input("Bitte gib die erste Zahl ein: "))
-            zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+            zahl1 = float(input("Bitte gib die erste Zahl ein: "))
+            zahl2 = float(input("Bitte gib die zweite Zahl ein: "))
         except ValueError:
             print("Fehler: Bitte nur Zahlen eingeben. ")
             continue  
@@ -73,8 +73,8 @@ while True:
     elif rechner == "4":
         print("Du hast / gewählt")
         try:
-            zahl1 = int(input("Bitte gib die erste Zahl ein: "))
-            zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+            zahl1 = float(input("Bitte gib die erste Zahl ein: "))
+            zahl2 = float(input("Bitte gib die zweite Zahl ein: "))
         except ValueError:
             print("Fehler: Bitte nur Zahlen eingeben. ")
             continue
