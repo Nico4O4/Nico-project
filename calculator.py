@@ -119,5 +119,4 @@ while True:
         else:
             print("Fehler: Bitte gib Y/y für eine neue Berechnung ein oder N/n zum beenden")
 
-    # WIP ...
     # Calculator - coded by: Nico4O4
