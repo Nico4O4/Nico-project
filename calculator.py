@@ -38,30 +38,46 @@ while True:
         print("Fehler: Bitte Zahl von 1-4 eingeben. ")
         continue #Geht zurück zum Anfang der Schleife
 
-    if rechner() == "1":
+    if rechner == "1":
         print("Du hast + gewählt")
-        zahl1 = int(input("Bitte gib die erste Zahl ein: "))
-        zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        try:
+            zahl1 = int(input("Bitte gib die erste Zahl ein: "))
+            zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        except ValueError:
+            print("Fehler: Bitte nur Zahlen eingeben. ")
+            continue
         print("Das Ergebnis ist:", addieren(zahl1, zahl2))
     
     elif rechner == "2":
         print("Du hast - gewählt")
-        zahl1 = int(input("Bitte gib die erste Zahl ein: "))
-        zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        try:
+            zahl1 = int(input("Bitte gib die erste Zahl ein: "))
+            zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        except ValueError:
+            print("Fehler: Bitte nur Zahlen eingeben. ")
+            continue
         print("Das Ergebnis ist:", subtrahieren(zahl1, zahl2))
         
 
     elif rechner == "3":
         print("Du hast * gewählt")
-        zahl1 = int(input("Bitte gib die erste Zahl ein: "))
-        zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        try:
+            zahl1 = int(input("Bitte gib die erste Zahl ein: "))
+            zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        except ValueError:
+            print("Fehler: Bitte nur Zahlen eingeben. ")
+            continue  
         print("Das Ergebnis ist", multiplizieren(zahl1, zahl2))
      
 
     elif rechner == "4":
         print("Du hast / gewählt")
-        zahl1 = int(input("Bitte gib die erste Zahl ein: "))
-        zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        try:
+            zahl1 = int(input("Bitte gib die erste Zahl ein: "))
+            zahl2 = int(input("Bitte gib die zweite Zahl ein: "))
+        except ValueError:
+            print("Fehler: Bitte nur Zahlen eingeben. ")
+            continue
         print("Das Ergebnis ist", dividieren(zahl1, zahl2))
        
 
