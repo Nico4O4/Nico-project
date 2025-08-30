@@ -5,3 +5,4 @@ The file "Calculator" is a project I worked on to refresh my Python skills after
 The file "pingprogramm" is a script that can ping a chosen IP address and output whether it is reachable or not.
 
 Otherwise, I upload general projects that I code here.
+You can use these programms / projects. :)
